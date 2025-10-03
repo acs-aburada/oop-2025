@@ -469,3 +469,16 @@ FodyWeavers.xsd
 *.msm
 *.msp
 
+# Solution and project files
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.vcxproj.user.props
+*.vcxproj.user.targets
+*.vcxproj.user.props
+
+**/*/x64/
+**/*/x86/
+
+.vscode
