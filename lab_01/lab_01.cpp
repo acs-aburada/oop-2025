@@ -18,7 +18,7 @@ int main()
 {
 	// types
 	int a = 10;				// size 4B
-	unsigned int b = -3;	// the most significant bit (most right one) is the sign bit
+	unsigned int b = -3;	// the most significant bit (most left one) is the sign bit
 	printf("a = %d; b = %u\n", a, b);
 
 	float c = 1.4f;
