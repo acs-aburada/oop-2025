@@ -115,12 +115,43 @@ int main()
 	printf("value of pointer dangler_copy = 0x%p -> points to deallocated memory | WRONG\n", dangler_copy);
 
 	// c++ specific input and output
-	// input (standard = keyboard)
+	// input (standard (keyword std) = keyboard)
 	int k;
 	printf("k = ");
 	std::cin >> k;
 	// output (standard = console)
 	std::cout << k;
+
+
+	// enum = special type that represents a group of constants
+	// defined outside main, for example purposes it will be included in main
+	// by default the values will start from 0
+	//				0		1		2		3
+	enum Season { SPRING, SUMMER, AUTUMN, WINTER };
+	enum Season myFavouriteSeason = Season::WINTER;
+	std::cout << "\nMy favourite season is " << myFavouriteSeason;
+
+	// enum hold integers, they can be custom defined
+	//enum Season_2 { SPRING = 1, SUMMER = 2, AUTUMN = 3, WINTER = 4 };
+
+	// mapping them to other values or code is done using switch
+	// switch strucutre = select one of many code blocks to execute
+	// (imagine a boat flowing down a river and diverging into multiple smaller streams)
+	switch (myFavouriteSeason) {
+		case Season::SPRING:
+			std::cout << "\nMy favourite season is spring!\n";
+			break;		// if we don't use break then the code will 
+						// continue executing within the switch structure
+		case Season::SUMMER:
+			std::cout << "\nMy favourite season is summer!\n";
+			break;
+		case Season::AUTUMN:
+			std::cout << "\nMy favourite season is autumn!\n";
+			break;
+		case Season::WINTER:
+			std::cout << "\nMy favourite season is winter!\n";
+			break;
+	}
 
 	return 0;	// error code -> 0
 }
