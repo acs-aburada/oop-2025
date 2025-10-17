@@ -55,13 +55,13 @@ char* copyPlayer(char* player) {
 	//				 char*,  (int),  char*
 	strcpy_s(copy, size, player);
 	// if we use src size, we can have a src bigger than dest
-	// which will cause a buffer overflow\
+	// which will cause a buffer overflow
 	// = writing in space you're not supposed to
 
 	// Q: do we need to deallocate any memory?
 	//delete[] copy; // A: NO -> because we are not done with it
 
-	return copy; // after the function "copy" gets deleted -> in the function stack
+	return copy; // after the function, var "copy" gets deleted -> in the function stack
 	// the actual memory space REMAINS
 }
 
@@ -111,6 +111,6 @@ int main() {
 	// you should not modify the returned value which is why the return type is const!
 	const char* anotherPlayerCopy = anotherPlayer.c_str();
 	std::cout << "another player copy: " << anotherPlayerCopy << std::endl;
-	// anotherlayerCopy is not managed by us, we don't need to deallocate it
+	// anotherPlayerCopy is not managed by us, we don't need to deallocate it
 	return 0;
 }
