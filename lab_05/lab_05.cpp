@@ -77,13 +77,14 @@ public:
     }
 
     // race times
-    // getRaceTime(int) -> get the race time at given index
+    // (int) -> get the race time at given index
     // addRaceTime(float) -> expand the array of race times by one with new value
     // setRaceTimes(float*, int) -> set the array of race times through deep copy to given array
     // getRaceTimes() -> get the entire array of race times
-    // TODO: setRaceCount -> set the attribute AND allocate memory
     // we can also consider that setRaceCount is only modified when the array is also changed
     // thus omitting this method altogether
+    // setRaceCount -> set the attribute AND allocate memory -> bad approach
+    //    the size of array should be modified together with the array only
 
     // const float* -> pointer to const float
     // float* const -> const pointer to float
