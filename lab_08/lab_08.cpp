@@ -136,7 +136,7 @@ public:
     // o1 = 02 OR o1.operator=(o2)
     // receives "this" as the first parameter
     // operator= actually has 2 parameters (o1 - first; o2 - second)
-    Journal& operator=(Journal& j) {
+    Journal& operator=(const Journal& j) {
         cout << "\nOperator= called" << endl;
         // do NOT do this
         //this->barcode = j.barcode;
@@ -156,7 +156,7 @@ public:
     // operator+ -> concat the brands
     // two params: (this, j)
     // return type: class type
-    Journal operator+(Journal& j) {
+    Journal operator+(const Journal& j) const {
         Journal result = *this;
         result.brand = this->brand + j.brand;
         return result;
