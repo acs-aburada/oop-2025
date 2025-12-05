@@ -189,6 +189,11 @@ int main()
     j4.print();
 
     j4 = j4 + j2; // j4.operator+(j2) then j4.operator=(j4.operator+(j2))
+    // j4.operator=(const Journal&)
+
+    // sum(const int a, const int b)
+    // you can call it with sum(const int, const int)
+    // sum(int, int)
     j4.print();
 
     return 0;
