@@ -481,4 +481,6 @@ FodyWeavers.xsd
 **/*/x64/
 **/*/x86/
 
+*.bin
+
 .vscode
